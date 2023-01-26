@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+</head>
+
+<body>
+    <h1><em>
+            <center> Contact</center>
+        </em></h1>
+    <a href="./index.html">Home >></a>
+    <a href="./about.html">About >></a>
+    <a href="./pricing.html">pricing >></a>
+    <br><br>
+    <form action="">
+        <p> <label for="first-name">First Name:</label>
+            <input name="first-name" type="text" placeholder="Safa">
+        </p>
+        <p> <label for="last-name">Last Name:</label>
+            <input name="last-name" type="text" placeholder="Fadl">
+        </p>
+        <p> <label for="email">Email address:</label>
+            <input name="email" type="email" placeholder="email@email.com">
+        </p>
+        <p> <label for="phone">phone number:</label>
+            <input name="phone" type="tel" placeholder="123-45-678" pattern=”[0-9]{2}-[0-9]{5}”>
+        </p>
+        <p> <label for="address">address:</label>
+            <input name="address" type="text" placeholder="123 main st.">
+        </p>
+        <p>
+            <label for="Province">Province:</label>
+            <select name="Province">
+                <option value="BC">Britch Columbia</option>
+                <option value="Albrta">Albrta</option>
+                <option value="NB">New Brunswick</option>
+                <option value="On">Ontrio</option>
+            </select>
+        </p>
+        <p>
+            <label for="promo-code">Promo Code:</label>
+            <input name="promo-code" type="text">
+        </p>
+        <p>
+             <h4> Type of cleaning (Select one)*</h4>
+            <input type="radio"  name="type-cleaning" value="one">
+            <label for="one"> One-time clean</label><br>
+            <input type="radio"  name="type-cleaning" value="regular">
+            <label for="regular">Regular cleaning service</label><br>
+        </p>
+        <p>
+            Comments/Requests:
+            <br>
+            <textarea rows="4" cols="50" name="comment" placeholder="We just finished renovating our kitchen and we need the whole house cleaned."></textarea>
+        </p>
+        <p>
+             <input type="checkbox" name="req-check"> <label for="req-check">Canada’s new anti-spam legislation requires us to have your consent to send you emails.<br> Please check this box to confirm your consent to receive electronic messages from Merry Maids.</label></p>
+             <input type="submit" name="sumbit" value="Sumbit">
+    </form>
+</body>
+
+</html>

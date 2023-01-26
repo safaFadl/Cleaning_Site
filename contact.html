@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <style>
+        .submit-style {
+            width: 80px;
+            height: 40px;
+            background-color: black;
+            color: white;
+            border-radius: 50% 0;
+            outline: 5px solid yellow;
+            outline-offset: 2px;
+        }
+
+        .h2-contact {
+            width: 150px;
+            height: 50px;
+            background-color: black;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 5px solid yellow;
+            border-radius: 15px;
+
+        }
+        div{
+            width: 200px;
+            height: 100px;
+            padding: 10px;
+            border: 2px solid grey;
+            margin: 20px;
+            box-shadow: 5px 5px 5px 5px lightblue;
+            text-align: center;
+           
+        }
+        fieldset{
+            width: 30%;
+        }
+        h2{
+            color: white;
+        }
+        body{
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="./index.html">Home </a>
+    <a href="./pricing.html">price</a>
+    <h1>My Service Based Contact</h1>
+
+    <form action="">
+        <div class="h2-contact">
+            <h2>Contact US</h2>
+        </div>
+        <fieldset>
+            <legend>Personal Information </legend>
+            <p>
+                <label for="first-name">First Name </label>
+                <input type="text" name="first-name" placeholder="John">
+            </p>
+            <p>
+                <label for="last-name">Last Name </label>
+                <input type="text" name="last-name" placeholder="Doe">
+            </p>
+        </fieldset>
+        <div>
+            <h2>Contact Time</h2>
+
+            <p>
+                <input type="radio" name="time" value="am">
+                <label for="am">AM </label>
+                <input type="radio" name="time" value="pm">
+                <label for="pm">PM</label>
+            </p>
+        </div>
+        <div>
+
+            <h2>Select Service</h2>
+            <select name="service" id="service" onchange="change()">
+                <option value="">Select</option>
+                <option value="indoor">indoor</option>
+                <option value="outdoor">outdoor</option>
+                <option value="in-out">indoor and outdoor</option>
+
+            </select>
+        </div>
+        <div id="div-outdoor" style="display:none">
+            <h2>Outdoor</h2>
+            <p><input type="checkbox" name="outdoor" value="Pressure-Washing"><label for="Pressure-Washing">Pressure
+                    Washing</label></p>
+            <p><input type="checkbox" name="outdoor" value="Moss-removal"><label for="Moss-removal">Moss
+                    Removal</label></p>
+            <p><input type="checkbox" name="outdoor" value="gullters"><label for="gullters">Gullters</label></p>
+            <p><input type="checkbox" name="outdoor" value="window-cleaning"><label for="window-cleaning">Window
+                    Cleaning</label></p>
+        </div>
+        <div id="div-indoor" style="display:none">
+            <h2>Indoor</h2>
+            <div>
+                <p><input type="checkbox" name="indoor" value="general-cleaning" checked><label
+                        for="general-cleaning">General
+                        Cleaning</label></p>
+                <p><input type="checkbox" name="indoor" value="after-party"><label for="after-party">After Party</label>
+                </p>
+                <p><input type="checkbox" name="indoor" value="move-out"><label for="move-out">Move Out</label></p>
+                <p><input type="checkbox" name="indoor" value="deep"><label for="deep">Deep Cleaning(Windows, Fridge,
+                        Oven
+                        etc...)</label></p>
+            </div>
+        </div>
+        <input type="submit" value="Submit" class="submit-style">
+    </form>
+    <script>
+
+        function change() {
+
+            var serviceValue = document.getElementById("service");
+            var divIndoor = document.getElementById("div-indoor");
+            var divOutdoor = document.getElementById("div-outdoor");
+
+
+            if (serviceValue.value == "indoor") {
+
+                // alert("dsd");
+                divIndoor.style.display = 'block';
+                divOutdoor.style.display = 'none';
+            }
+            else if (serviceValue.value == "outdoor") {
+                divIndoor.style.display = 'none';
+                divOutdoor.style.display = 'block';
+
+
+            }
+            else if (serviceValue.value == "in-out") {
+                divIndoor.style.display = 'block';
+                divOutdoor.style.display = 'block';
+            }
+            else {
+                divIndoor.style.display = 'none';
+                divOutdoor.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+
+</html>
