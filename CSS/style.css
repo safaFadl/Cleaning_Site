@@ -1,0 +1,19 @@
+.flex-container {
+
+    height: 200px;
+    width: 700px;
+    display:flex;
+}
+.flex-item{
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    margin: 2px;
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+.main-img{
+    width: 800px;
+}
